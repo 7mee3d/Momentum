@@ -214,9 +214,9 @@
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(496, 638);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 26);
+            this.label2.Size = new System.Drawing.Size(147, 26);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Pendding Task : ";
+            this.label2.Text = "Pending Task : ";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // labelPenddingTasks
