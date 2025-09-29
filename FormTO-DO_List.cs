@@ -410,7 +410,7 @@ namespace To_Do_List_Project
             {
                 int index = e.Index; 
 
-                await Task.Delay(2000);
+                await Task.Delay(5000);
             
                
                  if (index >= 0 && index < checkedListBoxTasks.Items.Count)
@@ -478,6 +478,11 @@ namespace To_Do_List_Project
         private void FormTO_DO_List_Resize(object sender, EventArgs e)
         {
             fixedMoveAndResizeForm();
+
+        }
+
+        private void checkedListBoxTasks_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }

@@ -57,6 +57,7 @@
             this.checkedListBoxTasks.Name = "checkedListBoxTasks";
             this.checkedListBoxTasks.Size = new System.Drawing.Size(336, 455);
             this.checkedListBoxTasks.TabIndex = 0;
+            this.checkedListBoxTasks.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxTasks_SelectedIndexChanged);
             // 
             // textBoxTitleNameTask
             // 
