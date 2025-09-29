@@ -357,11 +357,7 @@ namespace To_Do_List_Project
         {
             setAllItemsChecked(checkedListBoxTasks);
             (checkedListBoxTasks).Enabled = false ;
-            numberCompleted = checkedListBoxTasks.Items.Count;
-            labelCompleteNumberTasks.Text = numberCompleted.ToString();
-            numberPedding = 0;
-            labelPenddingTasks.Text = numberPedding.ToString();
-            (checkedListBoxTasks).Enabled = true;
+   
 
 
         }
@@ -406,39 +402,43 @@ namespace To_Do_List_Project
 
         private async void checkedListBoxTasks_ItemCheck(object sender, ItemCheckEventArgs e)
         {
+
             if (e.NewValue == CheckState.Checked) // لو المستخدم عمل Check
-            {
-                int index = e.Index; 
+            { 
 
-                await Task.Delay(5000);
-            
-               
-                 if (index >= 0 && index < checkedListBoxTasks.Items.Count)
-                {
-                    if (checkedListBoxTasks.Items.Count == 0)
-                    {
-                        numberCompleted = 0;
-                        numberPedding = 0;
-                        labelCompleteNumberTasks.Text = numberCompleted.ToString();
-                        labelPenddingTasks.Text = numberPedding.ToString();
-
-                    }
-                    else
-                    {
+                   
+                    
                         numberCompleted++;
                         numberPedding--;
 
                         labelCompleteNumberTasks.Text = numberCompleted.ToString();
                         labelPenddingTasks.Text = numberPedding.ToString();
 
-                    }
+                    
 
-                    checkedListBoxTasks.Items.RemoveAt(index);
-                  
-                }
-                
+
+
             }
+
+            if (e.NewValue == CheckState.Unchecked) // لو المستخدم عمل Check
+            {
+
+            
+               
+                    numberCompleted--;
+                    numberPedding++;
+
+                    labelCompleteNumberTasks.Text = numberCompleted.ToString();
+                    labelPenddingTasks.Text = numberPedding.ToString();
+
+                
+
+
+
+            }
+
         }
+        
 
         private void pictureBoxResetAlSettings_Click(object sender, EventArgs e)
         {
