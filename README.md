@@ -3,6 +3,13 @@
 > **Momentum** is a clean, intuitive, and beginner-friendly to-do list application built for **programming practice** and **personal productivity**.  
 > Easily add, complete, delete, and save your tasks — all through a sleek, user-friendly interface! 💻✨
 
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
+![Windows Forms](https://img.shields.io/badge/Windows%20Forms-0078D7?style=for-the-badge&logo=windows&logoColor=white)
+![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91?style=for-the-badge&logo=visual-studio&logoColor=white)
+
+---
+
 <img width="1235" height="737" alt="Screenshot 2025-09-29 200452" src="https://github.com/user-attachments/assets/84b0975b-b6df-4ba0-8e0a-033a43ba369e" />
 
 *The main interface — simple, clear, and effective!*
@@ -139,3 +146,14 @@ Auto-load on startup is not implemented (as this is a training project), but can
 - Export to PDF or Excel 📤
 - Multi-language support (including Arabic) 🌍
 - Dark Mode 🌙
+
+---
+
+# 👨💻 Author
+
+**Ahmed Jehad Ahmed**  
+
+
+🔗 [GitHub Profile](https://github.com/7mee3d)
+
+📧 [Email Contact](mailto:enginnerahemdjehad2004@gmail.com)
