@@ -481,9 +481,5 @@ namespace To_Do_List_Project
 
         }
 
-        private void checkedListBoxTasks_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
