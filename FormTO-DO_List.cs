@@ -19,11 +19,16 @@ namespace To_Do_List_Project
         {
             InitializeComponent();
             checkedListBoxTasks.ItemCheck += checkedListBoxTasks_ItemCheck;
+            notifyIconSaveTODOListINFile.BalloonTipClicked += notifyIconSaveTODOListINFile_BalloonTipClickedAsync;
+            notifyIconSaveTODOListINFile.Text = "Momentum";
+
 
         }
+        //Main Variables Program 
         static ushort numberToDoList = 1;
         int numberPedding = 0;
         int numberCompleted = 0;
+
         private void fixedMoveAndResizeForm()
         {
             int xWidth = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
@@ -61,15 +66,18 @@ namespace To_Do_List_Project
             return false; 
 
         }
+     
         private bool isEmptyString (string text )
         {
             return (text == ""); 
         }
+      
         private void MeAddAnyTaskInTheCheckedListBox (string nameTask )
         {
             checkedListBoxTasks.Items.Add(nameTask);
             
         }
+    
         private void MeMakeTheTextBoxEmptyAndFouces(object sender)
         {
 
@@ -78,6 +86,7 @@ namespace To_Do_List_Project
             objTextBox.Text = "";
             objTextBox.Focus();
         }
+       
         private void MeAddTheTaskAfterAllCheckListBox(string task )
 
         {
@@ -105,7 +114,6 @@ namespace To_Do_List_Project
 
             }
         }
-
 
         private bool MeNonSelectedItemToRemove(int indexItem)
         {
@@ -148,6 +156,7 @@ namespace To_Do_List_Project
 
            
         }
+
         private bool isNonChekedOneItem (int indexItem )
         {
             return (indexItem == -1);
@@ -194,7 +203,6 @@ namespace To_Do_List_Project
             }
         }
 
-
         private void setAllItemsUnChecked(object sender)
 
         {
@@ -221,6 +229,7 @@ namespace To_Do_List_Project
             CheckedListBox CLB = (sender as CheckedListBox);
             return (CLB.Items.Count == 0 ); 
         }
+
         private void HeaderSaveFileTextTODOList(ref string informationTODO_ListTasks) 
         {
             informationTODO_ListTasks += Environment.NewLine + Environment.NewLine + Environment.NewLine + Environment.NewLine + Environment.NewLine + Environment.NewLine + Environment.NewLine + Environment.NewLine;
@@ -250,11 +259,13 @@ namespace To_Do_List_Project
             informationTODO_ListTasks += "  |----------------------------------------------------------------------------------------------|" + Environment.NewLine;
             informationTODO_ListTasks += "  |                                                                                              |" + Environment.NewLine;
         }
+     
         private void FooterHeaderSaveFileTextTODOList(ref string informationTODO_ListTasks)
         { 
             informationTODO_ListTasks += "  |                                                                                              |" + Environment.NewLine;
             informationTODO_ListTasks += "  |----------------------------------------------------------------------------------------------|" + Environment.NewLine;
           }
+    
         private string linesTXTInformationTasksTODOList(object sender)
         {
             CheckedListBox CLB =  sender as CheckedListBox; 
@@ -289,6 +300,13 @@ namespace To_Do_List_Project
 
             return informationTODO_ListTasks;
         }
+       
+        private  void notfityIconSaveTODOListInTheFile ()
+        {
+            notifyIconSaveTODOListINFile.ShowBalloonTip(500, $"Notification Momentum{Environment.NewLine+Environment.NewLine}", "Done Save This TO-DO List..", ToolTipIcon.Info);
+      
+        }
+
         private string EmptylinesTXTInformationTasksTODOList(object sender)
         {
             CheckedListBox CLB = sender as CheckedListBox;
@@ -312,6 +330,7 @@ namespace To_Do_List_Project
             }
             return informationTODO_ListTasks;
         }
+    
         private void newTODOListResetAllSetting(object sender)
 
         {
@@ -326,6 +345,7 @@ namespace To_Do_List_Project
             CLB.Items.Clear(); 
 
         }
+        
         private void SaveTasksInFile (object sender)
         {
             CheckedListBox CLT = (sender as CheckedListBox);
@@ -339,6 +359,7 @@ namespace To_Do_List_Project
 
             SW.Close(); 
         }
+      
         private void buttonAddTask_Click(object sender, EventArgs e)
         {
             string task = textBoxTitleNameTask.Text;
@@ -378,6 +399,7 @@ namespace To_Do_List_Project
             SaveTasksInFile(checkedListBoxTasks);
             MessageBox.Show("The TO-DO List Is Saved in the File ", "Note Save TO-DO List", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            notfityIconSaveTODOListInTheFile();
 
         }
 
@@ -394,28 +416,17 @@ namespace To_Do_List_Project
             this.Close(); 
         }
 
-        private async Task checkedListBoxTasks_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-           
-        }
-
         private async void checkedListBoxTasks_ItemCheck(object sender, ItemCheckEventArgs e)
         {
 
             if (e.NewValue == CheckState.Checked) // لو المستخدم عمل Check
             { 
-
-                   
                     
                         numberCompleted++;
                         numberPedding--;
 
                         labelCompleteNumberTasks.Text = numberCompleted.ToString();
                         labelPenddingTasks.Text = numberPedding.ToString();
-
-                    
-
 
 
             }
@@ -431,43 +442,14 @@ namespace To_Do_List_Project
                     labelCompleteNumberTasks.Text = numberCompleted.ToString();
                     labelPenddingTasks.Text = numberPedding.ToString();
 
-                
-
-
 
             }
 
         }
-        
 
         private void pictureBoxResetAlSettings_Click(object sender, EventArgs e)
         {
             newTODOListResetAllSetting(checkedListBoxTasks);
-        }
-
-        private void FormTO_DO_List_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelPenddingTasks_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelCompleteNumberTasks_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void FormTO_DO_List_Move(object sender, EventArgs e)
@@ -481,5 +463,11 @@ namespace To_Do_List_Project
 
         }
 
+        private async void notifyIconSaveTODOListINFile_BalloonTipClickedAsync(object sender, EventArgs e)
+        {
+
+            await Task.Delay(1000);
+            System.Diagnostics.Process.Start("InformationTO_DOList.txt");
+        }
     }
 }

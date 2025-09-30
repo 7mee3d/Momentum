@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{813A5133-00EF-44AD-B77C-0933ED5135E7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>To_Do_List_Project</RootNamespace>
-    <AssemblyName>To-Do List Project</AssemblyName>
+    <RootNamespace>Momentum</RootNamespace>
+    <AssemblyName>Momentum</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -77,6 +77,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
     <None Include="Properties\Settings.settings">

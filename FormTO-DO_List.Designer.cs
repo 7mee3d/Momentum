@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTO_DO_List));
             this.checkedListBoxTasks = new System.Windows.Forms.CheckedListBox();
             this.textBoxTitleNameTask = new System.Windows.Forms.TextBox();
@@ -43,6 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.labelPenddingTasks = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.notifyIconSaveTODOListINFile = new System.Windows.Forms.NotifyIcon(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -191,7 +193,6 @@
             this.label1.Size = new System.Drawing.Size(173, 26);
             this.label1.TabIndex = 4;
             this.label1.Text = "Completed Task : ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // labelCompleteNumberTasks
             // 
@@ -204,7 +205,6 @@
             this.labelCompleteNumberTasks.Size = new System.Drawing.Size(22, 26);
             this.labelCompleteNumberTasks.TabIndex = 4;
             this.labelCompleteNumberTasks.Text = "0";
-            this.labelCompleteNumberTasks.Click += new System.EventHandler(this.labelCompleteNumberTasks_Click);
             // 
             // label2
             // 
@@ -217,7 +217,6 @@
             this.label2.Size = new System.Drawing.Size(147, 26);
             this.label2.TabIndex = 4;
             this.label2.Text = "Pending Task : ";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // labelPenddingTasks
             // 
@@ -230,7 +229,6 @@
             this.labelPenddingTasks.Size = new System.Drawing.Size(22, 26);
             this.labelPenddingTasks.TabIndex = 4;
             this.labelPenddingTasks.Text = "0";
-            this.labelPenddingTasks.Click += new System.EventHandler(this.labelPenddingTasks_Click);
             // 
             // pictureBox2
             // 
@@ -245,6 +243,13 @@
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBoxResetAlSettings_Click);
+            // 
+            // notifyIconSaveTODOListINFile
+            // 
+            this.notifyIconSaveTODOListINFile.BalloonTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.notifyIconSaveTODOListINFile.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIconSaveTODOListINFile.Icon")));
+            this.notifyIconSaveTODOListINFile.Text = "notifyIcon1";
+            this.notifyIconSaveTODOListINFile.Visible = true;
             // 
             // FormTO_DO_List
             // 
@@ -273,7 +278,6 @@
             this.MinimizeBox = false;
             this.Name = "FormTO_DO_List";
             this.Text = "TO DO List";
-            this.Load += new System.EventHandler(this.FormTO_DO_List_Load);
             this.Move += new System.EventHandler(this.FormTO_DO_List_Move);
             this.Resize += new System.EventHandler(this.FormTO_DO_List_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -299,5 +303,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelPenddingTasks;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.NotifyIcon notifyIconSaveTODOListINFile;
     }
 }
