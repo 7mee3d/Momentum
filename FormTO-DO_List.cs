@@ -18,17 +18,45 @@ namespace To_Do_List_Project
         public FormTO_DO_List()
         {
             InitializeComponent();
+
             checkedListBoxTasks.ItemCheck += checkedListBoxTasks_ItemCheck;
             notifyIconSaveTODOListINFile.BalloonTipClicked += notifyIconSaveTODOListINFile_BalloonTipClickedAsync;
             notifyIconSaveTODOListINFile.Text = "Momentum";
 
+            //ToolTip 
+            setToolTipAccordingTheControls(buttonRemoveAllTasks, "What does this button do?", "This Button remove all task in the Check Box", true, "info");
+            setToolTipAccordingTheControls(button1, "What does this button do?", "This Button Add New Task and Not Add Task same name task", true, "info");
+            setToolTipAccordingTheControls(buttonCheakedAllTasked, "What does this button do?", "This Button Check All Tasks in the TO-DO List After Click this Button", true, "info");
+            setToolTipAccordingTheControls(buttonUncheckedTasls, "What does this button do?", "This Button UnCheck All Tasks in the TO-DO List After Click this Button", true, "info");
+            setToolTipAccordingTheControls(buttonRemoveTask, "What does this button do?", "This Button Remove Task After the Select", true, "info");
+            setToolTipAccordingTheControls(button2, "What does this button do?", "This Button Save TO-DO List in the File ", true, "info");
+
 
         }
+
         //Main Variables Program 
         static ushort numberToDoList = 1;
         int numberPedding = 0;
         int numberCompleted = 0;
 
+        private void setToolTipAccordingTheControls(Control sender , string titleToolTip , string captionToolTip , bool isBallon = true  , string icon = "info")
+        {
+            toolTipTODOList.IsBalloon = isBallon;
+
+            if (icon == "info")
+                toolTipTODOList.ToolTipIcon = ToolTipIcon.Info;
+            else if (icon == "error")
+                toolTipTODOList.ToolTipIcon = ToolTipIcon.Error;
+            else if (icon == "warning")
+                toolTipTODOList.ToolTipIcon = ToolTipIcon.Warning;
+            else
+                toolTipTODOList.ToolTipIcon = ToolTipIcon.None;
+
+            toolTipTODOList.ToolTipTitle = titleToolTip;
+
+            toolTipTODOList.SetToolTip(sender, captionToolTip);
+
+        }
         private void fixedMoveAndResizeForm()
         {
             int xWidth = (Screen.PrimaryScreen.Bounds.Width - this.Width) / 2;
@@ -181,6 +209,7 @@ namespace To_Do_List_Project
              }
 
          }*/
+
         private void setAllItemsChecked(object sender)
 
         {
@@ -405,6 +434,7 @@ namespace To_Do_List_Project
 
         private void buttonRemoveAllTask_Click(object sender, EventArgs e)
         {
+            
             RemoveAllItems(ref checkedListBoxTasks);
             numberPedding = 0 ;
             labelPenddingTasks.Text = Convert.ToString(numberPedding);

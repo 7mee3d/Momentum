@@ -45,6 +45,7 @@
             this.labelPenddingTasks = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.notifyIconSaveTODOListINFile = new System.Windows.Forms.NotifyIcon(this.components);
+            this.toolTipTODOList = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -251,6 +252,12 @@
             this.notifyIconSaveTODOListINFile.Text = "notifyIcon1";
             this.notifyIconSaveTODOListINFile.Visible = true;
             // 
+            // toolTipTODOList
+            // 
+            this.toolTipTODOList.IsBalloon = true;
+            this.toolTipTODOList.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
+            this.toolTipTODOList.ToolTipTitle = "..";
+            // 
             // FormTO_DO_List
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -304,5 +311,6 @@
         private System.Windows.Forms.Label labelPenddingTasks;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.NotifyIcon notifyIconSaveTODOListINFile;
+        private System.Windows.Forms.ToolTip toolTipTODOList;
     }
 }
