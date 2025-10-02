@@ -10,7 +10,7 @@
 
 ---
 
-<img width="1235" height="737" alt="Screenshot 2025-09-29 200452" src="https://github.com/user-attachments/assets/84b0975b-b6df-4ba0-8e0a-033a43ba369e" />
+<img width="1247" height="748" alt="Screenshot 2025-10-02 182837" src="https://github.com/user-attachments/assets/d9802638-5579-402d-a527-15947b7e7fca" />
 
 *The main interface — simple, clear, and effective!*
 
