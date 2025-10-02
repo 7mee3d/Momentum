@@ -47,5 +47,10 @@ namespace To_Do_List_Project
         {
             fixedMoveAndResizeForm();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -284,7 +284,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormTO_DO_List";
-            this.Text = "TO DO List";
+            this.Text = "Momentum";
             this.Move += new System.EventHandler(this.FormTO_DO_List_Move);
             this.Resize += new System.EventHandler(this.FormTO_DO_List_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
