@@ -67,11 +67,12 @@ To prevent user errors and enhance experience, Momentum includes intelligent val
 
 ## 🖼️ Screenshots
 
-### 1. Main Application Window
-![Main Screen](assets/Screenshot%202025-09-29%20194253.png)
+### 1. Main Application Window - Welcome Window
 
-### 2. Example Task List in Action
-![Task List Example](assets/image.png)
+<img width="1247" height="748" alt="Screenshot 2025-10-02 182837" src="https://github.com/user-attachments/assets/d9802638-5579-402d-a527-15947b7e7fca" />
+
+### 2. Main Application Window
+<img width="1247" height="757" alt="Screenshot 2025-10-04 154844" src="https://github.com/user-attachments/assets/5d0abc8b-6c69-4d80-a76f-d36b9e07b52e" />
 
 > 💡 *No database used — all data is stored locally in a plain text file for simplicity and learning purposes.*
 
